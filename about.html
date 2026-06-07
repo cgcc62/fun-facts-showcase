@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于站长 - 趣味知识百科</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .resume-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .resume-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        .resume-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="icon">👤</span>
+                <h1>关于站长</h1>
+            </div>
+            <p class="tagline">探索世界的奇妙角落</p>
+        </div>
+    </header>
+
+    <main class="main about-main">
+        <div class="container">
+            <h2 class="resume-title">📄 个人简历</h2>
+            <div class="resume-container">
+                <img src="images/简历.PNG" alt="个人简历" class="resume-image">
+            </div>
+            
+            <div class="contact-card">
+                <h3 class="section-title">📮 联系我</h3>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="您的姓名" id="contactName">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="您的邮箱" id="contactEmail">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-textarea" placeholder="留言内容" id="contactMessage"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">发送留言</button>
+                </form>
+                <div class="success-message" id="successMessage">✉️ 留言已发送，感谢您的来信！</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>趣味知识百科 | 探索世界的奇妙角落</p>
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">🏠 首页</a>
+                <a href="about.html" class="footer-link active">👤 关于站长</a>
+                <a href="file:///C:/Users/Administrator/Desktop/%E7%AE%80%E5%8E%86.pdf" class="footer-link" target="_blank">📄 简历下载</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-indicator"></div>
+    
+    <button class="back-to-top" aria-label="返回顶部">↑</button>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initAboutPage();
+        });
+
+        function initAboutPage() {
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+            
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const name = document.getElementById('contactName').value;
+                const email = document.getElementById('contactEmail').value;
+                const message = document.getElementById('contactMessage').value;
+                
+                if (!name || !email || !message) {
+                    alert('请填写完整信息');
+                    return;
+                }
+                
+                const contactData = {
+                    name,
+                    email,
+                    message,
+                    time: new Date().toLocaleString('zh-CN')
+                };
+                
+                const messages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
+                messages.push(contactData);
+                localStorage.setItem('contactMessages', JSON.stringify(messages));
+                
+                form.reset();
+                successMessage.style.display = 'block';
+                
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 3000);
+            });
+        }
+    </script>
+</body>
+</html>

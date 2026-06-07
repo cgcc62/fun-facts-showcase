@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>趣味知识百科</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="nav-link">🏠 首页</a>
+                <a href="about.html" class="nav-link">👤 关于站长</a>
+            </nav>
+            <div class="logo">
+                <span class="icon">🔍</span>
+                <h1>趣味知识百科</h1>
+            </div>
+            <p class="tagline">探索世界的奇妙角落</p>
+            <div class="daily-quote" id="dailyQuote">
+                <span class="quote-icon">💡</span>
+                <span class="quote-text">加载中...</span>
+                <span class="quote-author"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="category-filter">
+        <div class="container">
+            <button class="filter-btn active" data-category="all">全部</button>
+            <button class="filter-btn" data-category="动物世界">🐾 动物世界</button>
+            <button class="filter-btn" data-category="昆虫奥秘">🐜 昆虫奥秘</button>
+            <button class="filter-btn" data-category="植物知识">🌿 植物知识</button>
+            <button class="filter-btn" data-category="历史之谜">🏛️ 历史之谜</button>
+            <button class="filter-btn" data-category="宇宙探索">🌌 宇宙探索</button>
+            <button class="filter-btn" data-category="萌宠趣事">🐱 萌宠趣事</button>
+            <button class="filter-btn" data-category="自然奇观">🌄 自然奇观</button>
+            <button class="filter-btn" data-category="气象知识">🌤️ 气象知识</button>
+            <button class="filter-btn" data-category="人体奥秘">🧬 人体奥秘</button>
+            <button class="filter-btn" data-category="科学发现">🔬 科学发现</button>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="container">
+            <section class="card-grid">
+                <article class="card" data-id="octopus" data-category="动物世界">
+                    <div class="card-image">
+                        <img data-src="images/jimeng-2026-06-02-5478-章鱼有三颗心脏科普知识配图，真实章鱼特写，质感清晰，无卡片边框，纯粹真实摄影.png" alt="章鱼有三颗心脏" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-7272-章鱼有三颗心脏科普知识配图，真实章鱼在珊瑚礁间游动，无卡片边框，纯粹真实摄影，自....png" alt="章鱼在珊瑚礁间" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-8868-章鱼有三颗心脏科普知识配图，真实章鱼在深海环境，无卡片边框，纯粹真实摄影，深海蓝....png" alt="章鱼在深海" class="lightbox-trigger lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">🐙 章鱼有三颗心脏</h2>
+                        <p class="card-description">章鱼拥有三颗心脏：两颗专门负责将血液输送到鳃部，一颗负责将血液输送到全身。当它们游泳时，主心脏会停止跳动，所以章鱼更喜欢爬行。</p>
+                        <span class="card-tag">动物世界</span>
+                        <div class="card-actions">
+                            <button class="action-btn like-btn" data-action="like">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count" id="like-octopus">0</span>
+                            </button>
+                            <button class="action-btn favorite-btn" data-action="favorite">
+                                <span class="action-icon">⭐</span>
+                                <span class="action-count" id="favorite-octopus">0</span>
+                            </button>
+                            <button class="action-btn comment-btn" data-action="comment">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count" id="comment-octopus">0</span>
+                            </button>
+                            <button class="action-btn share-btn" data-action="share">
+                                <span class="action-icon">🔗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-id="bee" data-category="昆虫奥秘">
+                    <div class="card-image">
+                        <img data-src="images/jimeng-2026-06-02-3934-蜜蜂的摇摆舞科普配图，真实蜜蜂在花朵上，无卡片边框，自然微距摄影，清晰生动.png" alt="蜜蜂的摇摆舞" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-1002-蜜蜂的摇摆舞科普配图，蜂巢内蜜蜂群体，无卡片边框，真实自然摄影.png" alt="蜂巢内蜜蜂" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-6419-蜜蜂的摇摆舞科普配图，春季花丛中蜜蜂特写，无卡片边框，真实微距摄影.png" alt="花丛中蜜蜂" class="lightbox-trigger lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">🐝 蜜蜂的摇摆舞</h2>
+                        <p class="card-description">蜜蜂通过独特的"摇摆舞"来告诉同伴食物源的位置。舞蹈的角度表示方向，摇摆次数表示距离，科学家称这是一种复杂的动物语言。</p>
+                        <span class="card-tag">昆虫奥秘</span>
+                        <div class="card-actions">
+                            <button class="action-btn like-btn" data-action="like">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count" id="like-bee">0</span>
+                            </button>
+                            <button class="action-btn favorite-btn" data-action="favorite">
+                                <span class="action-icon">⭐</span>
+                                <span class="action-count" id="favorite-bee">0</span>
+                            </button>
+                            <button class="action-btn comment-btn" data-action="comment">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count" id="comment-bee">0</span>
+                            </button>
+                            <button class="action-btn share-btn" data-action="share">
+                                <span class="action-icon">🔗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-id="banana" data-category="植物知识">
+                    <div class="card-image">
+                        <img data-src="images/jimeng-2026-06-02-8389-香蕉其实是浆果科普配图，新鲜剥开香蕉特写，果肉纹理清晰，无卡片边框，真实美食摄影.png" alt="香蕉是浆果" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-6418-香蕉其实是浆果科普配图，热带香蕉园收获场景，无卡片边框，真实农业摄影.png" alt="香蕉园" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-7385-香蕉其实是浆果科普配图，热带香蕉树成串香蕉，无卡片边框，真实自然风光摄影.png" alt="香蕉树" class="lightbox-trigger lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">🍌 香蕉其实是浆果</h2>
+                        <p class="card-description">从植物学角度来说，香蕉属于浆果，而草莓却不是真正的浆果。真正的浆果是由单个子房发育而成，内含多粒种子。</p>
+                        <span class="card-tag">植物知识</span>
+                        <div class="card-actions">
+                            <button class="action-btn like-btn" data-action="like">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count" id="like-banana">0</span>
+                            </button>
+                            <button class="action-btn favorite-btn" data-action="favorite">
+                                <span class="action-icon">⭐</span>
+                                <span class="action-count" id="favorite-banana">0</span>
+                            </button>
+                            <button class="action-btn comment-btn" data-action="comment">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count" id="comment-banana">0</span>
+                            </button>
+                            <button class="action-btn share-btn" data-action="share">
+                                <span class="action-icon">🔗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-id="pyramid" data-category="历史之谜">
+                    <div class="card-image">
+                        <img data-src="images/jimeng-2026-06-02-6427-金字塔建造之谜科普配图，日落金字塔全景，大气壮观，无卡片边框，真实风景摄影.png" alt="金字塔建造之谜" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-1723-金字塔建造之谜科普配图，金字塔石块纹理特写，古老质感，无卡片边框，真实细节摄影.png" alt="金字塔石块" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-6603-金字塔建造之谜科普配图，吉萨金字塔群沙漠全景，无卡片边框，真实风景摄影.png" alt="吉萨金字塔群" class="lightbox-trigger lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">🏛️ 金字塔建造之谜</h2>
+                        <p class="card-description">吉萨金字塔的建造至今仍是个谜。每块石头重达2-8吨，古埃及人如何搬运这些巨石并精确堆叠，至今没有定论。</p>
+                        <span class="card-tag">历史之谜</span>
+                        <div class="card-actions">
+                            <button class="action-btn like-btn" data-action="like">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count" id="like-pyramid">0</span>
+                            </button>
+                            <button class="action-btn favorite-btn" data-action="favorite">
+                                <span class="action-icon">⭐</span>
+                                <span class="action-count" id="favorite-pyramid">0</span>
+                            </button>
+                            <button class="action-btn comment-btn" data-action="comment">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count" id="comment-pyramid">0</span>
+                            </button>
+                            <button class="action-btn share-btn" data-action="share">
+                                <span class="action-icon">🔗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-id="blackhole" data-category="宇宙探索">
+                    <div class="card-image">
+                        <img data-src="images/jimeng-2026-06-02-1906-黑洞信息悖论科普配图，宇宙黑洞可视化，吸积盘发光，无卡片边框，科幻真实质感宇宙场....png" alt="黑洞信息悖论" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-2235-黑洞信息悖论科普配图，黑洞事件视界全景星云背景，无卡片边框，宇宙科学可视化.png" alt="黑洞事件视界" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-3028-黑洞信息悖论科普配图，超大质量黑洞侧面视角，无卡片边框，宇宙深空场景真实质感.png" alt="超大质量黑洞" class="lightbox-trigger lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">🕳️ 黑洞信息悖论</h2>
+                        <p class="card-description">当物质落入黑洞后，其信息似乎会永久消失，但量子力学认为信息不会被摧毁。这个矛盾被称为"黑洞信息悖论"，至今未解。</p>
+                        <span class="card-tag">宇宙探索</span>
+                        <div class="card-actions">
+                            <button class="action-btn like-btn" data-action="like">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count" id="like-blackhole">0</span>
+                            </button>
+                            <button class="action-btn favorite-btn" data-action="favorite">
+                                <span class="action-icon">⭐</span>
+                                <span class="action-count" id="favorite-blackhole">0</span>
+                            </button>
+                            <button class="action-btn comment-btn" data-action="comment">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count" id="comment-blackhole">0</span>
+                            </button>
+                            <button class="action-btn share-btn" data-action="share">
+                                <span class="action-icon">🔗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-id="cat" data-category="萌宠趣事">
+                    <div class="card-image">
+                        <img data-src="images/jimeng-2026-06-02-8568-猫咪一生睡一半科普配图，猫咪蜷缩窗台晒太阳睡觉，无卡片边框，治愈真实猫摄影.png" alt="猫咪的睡眠" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-2104-猫咪一生睡一半科普配图，猫咪趴在沙发睡觉，暖色调室内，无卡片边框，真实猫咪摄影.png" alt="猫咪在沙发" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-2727-猫咪一生睡一半科普配图，橘猫趴在地毯深度睡眠特写，无卡片边框，真实宠物摄影.png" alt="橘猫睡觉" class="lightbox-trigger lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">😺 猫咪一生睡一半</h2>
+                        <p class="card-description">猫咪平均每天睡12-16小时，有些甚至能睡20小时。它们是真正的"睡美人"，大部分时间都在打盹和深度睡眠之间切换。</p>
+                        <span class="card-tag">萌宠趣事</span>
+                        <div class="card-actions">
+                            <button class="action-btn like-btn" data-action="like">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count" id="like-cat">0</span>
+                            </button>
+                            <button class="action-btn favorite-btn" data-action="favorite">
+                                <span class="action-icon">⭐</span>
+                                <span class="action-count" id="favorite-cat">0</span>
+                            </button>
+                            <button class="action-btn comment-btn" data-action="comment">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count" id="comment-cat">0</span>
+                            </button>
+                            <button class="action-btn share-btn" data-action="share">
+                                <span class="action-icon">🔗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-id="butterfly" data-category="自然奇观">
+                    <div class="card-image">
+                        <img data-src="images/jimeng-2026-06-02-9205-蝴蝶破茧重生科普配图，蝴蝶刚破茧展开翅膀，无卡片边框，真实自然微距摄影.png" alt="蝴蝶破茧" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-6712-蝴蝶破茧重生科普配图，蝴蝶破茧过程特写，蛹开裂细节，无卡片边框，真实自然微距摄影.png" alt="蝴蝶破茧过程" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-8774-蝴蝶破茧重生科普配图，蝴蝶完全破茧停留在茧壳，花园背景，无卡片边框，真实自然摄影.png" alt="蝴蝶停留在茧壳" class="lightbox-trigger lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">🦋 蝴蝶破茧重生</h2>
+                        <p class="card-description">毛毛虫化蛹后会溶解成"细胞汤"，然后重新组合成蝴蝶。这个过程就像彻底摧毁一座房子，再用砖块重建一座全新的建筑。</p>
+                        <span class="card-tag">自然奇观</span>
+                        <div class="card-actions">
+                            <button class="action-btn like-btn" data-action="like">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count" id="like-butterfly">0</span>
+                            </button>
+                            <button class="action-btn favorite-btn" data-action="favorite">
+                                <span class="action-icon">⭐</span>
+                                <span class="action-count" id="favorite-butterfly">0</span>
+                            </button>
+                            <button class="action-btn comment-btn" data-action="comment">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count" id="comment-butterfly">0</span>
+                            </button>
+                            <button class="action-btn share-btn" data-action="share">
+                                <span class="action-icon">🔗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-id="rainbow" data-category="气象知识">
+                    <div class="card-image">
+                        <img data-src="images/jimeng-2026-06-02-3410-彩虹其实是圆形的科普配图，雨后瀑布上空完整圆形彩虹，无卡片边框，真实自然风景摄影.png" alt="彩虹是圆形的" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-4482-彩虹其实是圆形的科普配图，完整圆形彩虹环绕远山，航拍视角，无卡片边框，真实自然风....png" alt="彩虹环绕远山" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-02-6774-彩虹其实是圆形的科普配图，高空俯瞰完整圆形彩虹，云层背景，无卡片边框，真实自然风....png" alt="高空彩虹" class="lightbox-trigger lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">🌈 彩虹其实是圆形的</h2>
+                        <p class="card-description">我们看到的彩虹是弧形的，是因为地面挡住了下半部分。从高空看，彩虹其实是一个完整的圆环，这就是"彩虹圈"现象。</p>
+                        <span class="card-tag">气象知识</span>
+                        <div class="card-actions">
+                            <button class="action-btn like-btn" data-action="like">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count" id="like-rainbow">0</span>
+                            </button>
+                            <button class="action-btn favorite-btn" data-action="favorite">
+                                <span class="action-icon">⭐</span>
+                                <span class="action-count" id="favorite-rainbow">0</span>
+                            </button>
+                            <button class="action-btn comment-btn" data-action="comment">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count" id="comment-rainbow">0</span>
+                            </button>
+                            <button class="action-btn share-btn" data-action="share">
+                                <span class="action-icon">🔗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-id="brain" data-category="人体奥秘">
+                    <div class="card-image">
+                        <img data-src="images/jimeng-2026-06-07-1832-轻柔梦幻风格，人类大脑向外飘出无数色彩柔和的发光微型气泡，每个气泡都代表一个想法....png" alt="大脑记忆" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-07-3796-创意信息可视化风格，左侧是人类大脑，右侧做直观类比：堆叠的2.5PB容量硬盘阵列....png" alt="大脑结构" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-07-5458-奇幻概念插画风格，人类大脑内部构建成宏伟的宫殿空间，排列着无数装满记忆的书架与发....png" alt="大脑功能" class="lightbox-trigger lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">🧠 大脑的记忆宫殿</h2>
+                        <p class="card-description">人类大脑的记忆容量相当于大约2.5PB的存储量，相当于300万小时的电视节目。我们每天大约会产生70000个想法。</p>
+                        <span class="card-tag">人体奥秘</span>
+                        <div class="card-actions">
+                            <button class="action-btn like-btn" data-action="like">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count" id="like-brain">0</span>
+                            </button>
+                            <button class="action-btn favorite-btn" data-action="favorite">
+                                <span class="action-icon">⭐</span>
+                                <span class="action-count" id="favorite-brain">0</span>
+                            </button>
+                            <button class="action-btn comment-btn" data-action="comment">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count" id="comment-brain">0</span>
+                            </button>
+                            <button class="action-btn share-btn" data-action="share">
+                                <span class="action-icon">🔗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-id="dolphin" data-category="动物世界">
+                    <div class="card-image">
+                        <img data-src="images/jimeng-2026-06-07-3555-蔚蓝清澈的热带海洋中，一只海豚跃出水面，周围环绕着代表独特哨声的彩色声波波纹，阳....png" alt="海豚智商" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-07-4599-一群海豚在开阔的蓝色海洋中结伴游动，彼此亲密互动，形成秩序井然的社交群体，澄澈海....png" alt="海豚跳跃" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-07-8259-两只海豚在清澈的海水中面对面游动，各自发出形态不同的柔和声波波纹，仿佛在用专属哨....png" alt="海豚群体" class="lightbox-trigger lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">🐬 海豚会给自己起名字</h2>
+                        <p class="card-description">海豚拥有复杂的社交结构，它们会给自己起独特的名字。每只海豚都有独特的哨声，其他海豚会用这个哨声来称呼它。</p>
+                        <span class="card-tag">动物世界</span>
+                        <div class="card-actions">
+                            <button class="action-btn like-btn" data-action="like">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count" id="like-dolphin">0</span>
+                            </button>
+                            <button class="action-btn favorite-btn" data-action="favorite">
+                                <span class="action-icon">⭐</span>
+                                <span class="action-count" id="favorite-dolphin">0</span>
+                            </button>
+                            <button class="action-btn comment-btn" data-action="comment">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count" id="comment-dolphin">0</span>
+                            </button>
+                            <button class="action-btn share-btn" data-action="share">
+                                <span class="action-icon">🔗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-id="ant" data-category="昆虫奥秘">
+                    <div class="card-image">
+                        <img data-src="images/jimeng-2026-06-07-7202-俯拍微距视角，密集的蚂蚁群体在地面上有序行进，彼此之间通过半透明虚线形式的信息素....png" alt="蚂蚁分工" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-07-7760-微距写实摄影，一只强壮的黑蚂蚁在户外地面上稳稳举起重量远超自身的大块面包屑，肢体....png" alt="蚂蚁搬运" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-07-7627-创意对比插画风格，拟人化的蚂蚁站在城市街道上轻松举着一辆重型卡车，周围的人类抬头....png" alt="蚂蚁巢穴" class="lightbox-trigger lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">🐜 蚂蚁的超级力量</h2>
+                        <p class="card-description">蚂蚁可以举起超过自身体重50倍的物体，相当于人类举起一辆卡车。它们通过气味进行交流，形成复杂的群体智慧。</p>
+                        <span class="card-tag">昆虫奥秘</span>
+                        <div class="card-actions">
+                            <button class="action-btn like-btn" data-action="like">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count" id="like-ant">0</span>
+                            </button>
+                            <button class="action-btn favorite-btn" data-action="favorite">
+                                <span class="action-icon">⭐</span>
+                                <span class="action-count" id="favorite-ant">0</span>
+                            </button>
+                            <button class="action-btn comment-btn" data-action="comment">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count" id="comment-ant">0</span>
+                            </button>
+                            <button class="action-btn share-btn" data-action="share">
+                                <span class="action-icon">🔗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-id="penguin" data-category="动物世界">
+                    <div class="card-image">
+                        <img data-src="images/jimeng-2026-06-07-4722-写实南极极地场景，一群企鹅稳稳站在皑皑冰面上，特写它们的黑色脚掌接触冰面，背景是....png" alt="企鹅的脚" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-07-4867-微距写实特写，企鹅的脚掌踩在带有细碎冰霜的冰面上，用淡蓝色渐变视觉化示意脚部温度....png" alt="企鹅群体" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-07-6293-科普插画风格，企鹅脚部半透明解剖特写，清晰展示内部交错的特殊血管结构，用箭头示意....png" alt="企鹅游泳" class="lightbox-trigger lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">🐧 企鹅的脚不怕冷</h2>
+                        <p class="card-description">企鹅的脚有特殊的血管系统，可以让热血和冷血进行热交换，从而保持脚部温暖。它们站在冰面上时，脚部温度可以接近冰点但不会冻伤。</p>
+                        <span class="card-tag">动物世界</span>
+                        <div class="card-actions">
+                            <button class="action-btn like-btn" data-action="like">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count" id="like-penguin">0</span>
+                            </button>
+                            <button class="action-btn favorite-btn" data-action="favorite">
+                                <span class="action-icon">⭐</span>
+                                <span class="action-count" id="favorite-penguin">0</span>
+                            </button>
+                            <button class="action-btn comment-btn" data-action="comment">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count" id="comment-penguin">0</span>
+                            </button>
+                            <button class="action-btn share-btn" data-action="share">
+                                <span class="action-icon">🔗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-id="moon" data-category="宇宙探索">
+                    <div class="card-image">
+                        <img data-src="images/jimeng-2026-06-07-2290-写实天文摄影风格，深邃黑色宇宙背景中，地球与月球同框，月球始终以同一面朝向地球，....png" alt="月球背面" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-07-7055-科普示意图风格，展示月球围绕地球公转的轨道，同时标注月球自转的箭头，清晰标注「自....png" alt="月球表面" class="lightbox-trigger lazy">
+                        <img data-src="images/jimeng-2026-06-07-5984-概念可视化风格，地球与月球之间画出半透明淡蓝色的引力作用线条，标注「潮汐锁定」文....png" alt="月球与地球" class="lightbox-trigger lazy">
+                        <div class="image-overlay">
+                            <span class="overlay-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">🌙 月球总是同一面朝向地球</h2>
+                        <p class="card-description">月球的自转周期和公转周期完全相同，这意味着它总是用同一面朝向地球。这种现象称为"潮汐锁定"，是地球引力长期作用的结果。</p>
+                        <span class="card-tag">宇宙探索</span>
+                        <div class="card-actions">
+                            <button class="action-btn like-btn" data-action="like">
+                                <span class="action-icon">❤️</span>
+                                <span class="action-count" id="like-moon">0</span>
+                            </button>
+                            <button class="action-btn favorite-btn" data-action="favorite">
+                                <span class="action-icon">⭐</span>
+                                <span class="action-count" id="favorite-moon">0</span>
+                            </button>
+                            <button class="action-btn comment-btn" data-action="comment">
+                                <span class="action-icon">💬</span>
+                                <span class="action-count" id="comment-moon">0</span>
+                            </button>
+                            <button class="action-btn share-btn" data-action="share">
+                                <span class="action-icon">🔗</span>
+                                <span class="action-text">分享</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="guestbook-section">
+                <h2 class="section-title">📝 留言板</h2>
+                <div class="guestbook">
+                    <div class="guestbook-form">
+                        <input type="text" class="guestbook-name" placeholder="您的昵称" id="guestbookName">
+                        <textarea class="guestbook-content" placeholder="写下您想说的话..." id="guestbookMessage"></textarea>
+                        <button class="guestbook-submit" id="guestbookSubmit">发表留言</button>
+                    </div>
+                    <div class="guestbook-list" id="guestbookList">
+                        <div class="no-messages">暂无留言，快来发表第一条吧！</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>趣味知识百科 | 探索世界的奇妙角落</p>
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">🏠 首页</a>
+                <a href="about.html" class="footer-link">👤 关于站长</a>
+                <a href="file:///C:/Users/Administrator/Desktop/%E7%AE%80%E5%8E%86.pdf" class="footer-link" target="_blank">📄 简历下载</a>
+            </div>
+            <p class="copyright">© 2024 趣味知识百科 | 作者：张三</p>
+        </div>
+    </footer>
+
+    <div class="scroll-indicator"></div>
+    
+    <button class="back-to-top" aria-label="返回顶部">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
